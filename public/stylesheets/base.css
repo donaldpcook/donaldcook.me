@@ -1,358 +1,277 @@
 /*
-  title: base css
-*/
+ * HTML5 Boilerplate
+ *
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
 
 
-/* =global elements
---------------------------------------------- */
-body {
-  color: #999;
-  font: 14px/1.5em "Lucida Grande", Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  width: 742px;
+/* =============================================================================
+   HTML5 element display
+   ========================================================================== */
 
-  margin: 20px; /* NOTE: Temporary */
-}
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; }
+audio[controls], canvas, video { display: inline-block; *display: inline; *zoom: 1; }
 
-a:link, a:visited {
-  color: #3b5998;
-  font-weight: bold;
-  text-decoration: none;
-}
 
-a:hover, a:active {
-  text-decoration: underline;
-}
+/* =============================================================================
+   Base
+   ========================================================================== */
 
-h1 {
-  color: #656565;
-  font-family: "Helvetica Neue", Arial, sans-serif;
-  font-size: 18px;
-  font-weight: normal;
-}
+/*
+ * 1. Correct text resizing oddly in IE6/7 when body font-size is set using em units
+ *    http://clagnut.com/blog/348/#c790
+ * 2. Force vertical scrollbar in non-IE
+ * 3. Remove Android and iOS tap highlight color to prevent entire container being highlighted
+ *    www.yuiblog.com/blog/2010/10/01/quick-tip-customizing-the-mobile-safari-tap-highlight-color/
+ * 4. Prevent iOS text size adjust on device orientation change, without disabling user zoom
+ *    www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/
+ */
 
-/* ------------------------------------------ */
+html { font-size: 100%; overflow-y: scroll; -webkit-overflow-scrolling: touch; -webkit-tap-highlight-color: rgba(0,0,0,0); -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
 
-/* =header
---------------------------------------------- */
-header {
-  border-left: 1px solid #b3b3b3;
-  border-right: 1px solid #b3b3b3;
-  border-top: 1px solid #b3b3b3;
-  font-size: 11px;
-  padding: 24px 18px;
-}
+body { margin: 0; font-size: 13px; line-height: 1.231; }
 
-header h1 {
-  border-bottom: 2px solid #e9e9e9;
-  margin: 0 0 9px;
-  padding: 2px 0 8px;
-}
+body, button, input, select, textarea { font-family: sans-serif; color: #222; }
 
-header #picture + div {
-  margin-left: 82px;
-}
+/* 
+ * These selection declarations have to be separate
+ * No text-shadow: twitter.com/miketaylr/status/12228805301
+ * Also: hot pink!
+ */
 
-header #picture {
-  background-position: center 25%;
-  background-repeat: no-repeat;
-  float: left;
-  margin-right: 18px;
-  width: 64px;
-  height: 64px;
-  overflow: hidden;
-}
+::-moz-selection { background: #fe57a1; color: #fff; text-shadow: none; }
+::selection { background: #fe57a1; color: #fff; text-shadow: none; }
 
-header .tagline {
-  float: left;
-}
 
-#share-app {
-  float: right;
-  width: 318px;
-}
+/* =============================================================================
+   Links
+   ========================================================================== */
 
-#share-app ul {
-  float: right;
-}
+a { color: #00e; }
+a:visited { color: #551a8b; }
+a:focus { outline: thin dotted; }
 
-#share-app p {
-  float: left;
-}
+/* Improve readability when focused and hovered in all browsers: people.opera.com/patrickl/experiments/keyboard/test */
+a:hover, a:active { outline: 0; }
 
-#share-app li {
-  float: left;
-  list-style: none;
-  margin-left: 8px;
-}
-/* ------------------------------------------ */
 
-/* =buttons
---------------------------------------------- */
-.facebook-button:link, .facebook-button:visited {
-  background-color: #eee;
-  background-image: -moz-linear-gradient(top, #fdfdfd, #eaebeb);
-  background-image: -ms-linear-gradient(top, #fdfdfd, #eaebeb);
-  background-image: -o-linear-gradient(top, #fdfdfd, #eaebeb));
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#fdfdfd), to(#eaebeb));
-  background-image: -webkit-linear-gradient(top, #fdfdfd, #eaebeb);
-  background-image: linear-gradient(top, #fdfdfd, #eaebeb);
-  border: 1px solid #a9a9a9;
-  -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, .1);
-  -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, .1);
-  box-shadow: 0 1px 0 rgba(0, 0, 0, .1);
-  color: #4f4f4f;
-  display: -moz-inline-box;
-  display: inline-block;
-  font-family: 'Lucida Grande', Tahoma, Verdana, Arial, sans-serif;
-  font-size: 11px;
-  font-weight: bold;
-  line-height: 20px;
-  margin: 0;
-  outline: none;
-  text-decoration: none;
-  text-shadow: 0 1px 1px rgba(255, 255, 255, .33);
-}
+/* =============================================================================
+   Typography
+   ========================================================================== */
 
-.facebook-button span {
-  background: url("../images/sprites.png") no-repeat;
-  padding: 0 7px 0 21px;
-}
+abbr[title] { border-bottom: 1px dotted; }
 
-.facebook-button .speech-bubble {
-  background-position: 6px 3px;
-}
+b, strong { font-weight: bold; }
 
-.facebook-button .plus {
-  background-position: 6px -17px;
-}
+blockquote { margin: 1em 40px; }
 
-.button:link, .button:visited {
-  background-color: #7a90c0;
-  background-image: -moz-linear-gradient(top, #97afe2, #6073a1);
-  background-image: -ms-linear-gradient(top, #97afe2, #6073a1);
-  background-image: -o-linear-gradient(top, #97afe2, #6073a1);
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#97afe2), to(#6073a1));
-  background-image: -webkit-linear-gradient(top, #97afe2, #6073a1);
-  background-image: linear-gradient(top, #97afe2, #6073a1);
-  border: none;
-  -moz-border-radius: 30px;
-  -webkit-border-radius: 30px;
-  border-radius: 30px;
-  -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, .5), 0 1px 1px rgba(255, 255, 255, .33) inset;
-  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .5), 0 1px 1px rgba(255, 255, 255, .33) inset;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, .5), 0 1px 1px rgba(255, 255, 255, .33) inset;
-  color: #1d222c;
-  display: inline-block;
-  font: bold 14px "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif;
-  line-height: 32px;
-  padding: 0 25px;
-  text-decoration: none;
-  text-shadow: 0 1px 1px rgba(255, 255, 255, .2);
-}
-/* ------------------------------------------ */
+dfn { font-style: italic; }
 
-/* =get started
---------------------------------------------- */
-#get-started {
-  background: url("../images/get-started-bg.jpg");
-  border: 1px solid #353d4f;
-  height: 105px;
-  text-align: center;
-  text-shadow: 0 1px 0 rgba(0, 0, 0, .29);
-  padding: 32px 0 0;
-}
+hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
 
-#get-started p {
-  color: #fff;
-  font-family: "CorbelRegular";
-  font-size: 24px;
-  height: 23px;
-  margin-bottom: 24px;
-}
+ins { background: #ff9; color: #000; text-decoration: none; }
 
-#get-started p span {
-  font-family: "HybreaRegular";
-  font-size: 22px;
-}
-/* ------------------------------------------ */
+mark { background: #ff0; color: #000; font-style: italic; font-weight: bold; }
 
-/* =guides/samples spacing
---------------------------------------------- */
-#guides h1,
-#samples h1 {
-  margin-bottom: 15px;
-  text-align: center;
-}
+/* Redeclare monospace font family: en.wikipedia.org/wiki/User:Davidgothberg/Test59 */
+pre, code, kbd, samp { font-family: monospace, monospace; _font-family: 'courier new', monospace; font-size: 1em; }
 
-#guides, #samples {
-  padding: 20px 10px 20px 14px;
-}
+/* Improve readability of pre-formatted text in all browsers */
+pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; }
 
-#guides ul li,
-#samples .list {
-  float: left;
-  margin-right: 7px;
-  width: 172px;
-}
+q { quotes: none; }
+q:before, q:after { content: ""; content: none; }
 
-#guides ul li p,
-#samples ul {
-  padding: 0 4px;
-}
-/* ------------------------------------------ */
+small { font-size: 85%; }
 
-/* =guides
---------------------------------------------- */
-#guides {
-  border-bottom: 1px solid #b3b3b3;
-  border-left: 1px solid #b3b3b3;
-  border-right: 1px solid #b3b3b3;
-}
+/* Position subscript and superscript content without affecting line-height: gist.github.com/413930 */
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
 
-#guides ul li {
-  font-size: 11px;
-  list-style: none;
-}
 
-#guides ul li p {
-  -moz-hyphens: auto;
-  -webkit-hyphens: auto;
-  line-height: 20px;
-  text-align: justify;
-}
+/* =============================================================================
+   Lists
+   ========================================================================== */
 
-#guides ul li:first-child {
-  margin-left: 0;
-}
+ul, ol { margin: 1em 0; padding: 0 0 0 40px; }
+dd { margin: 0 0 0 40px; }
+nav ul, nav ol { list-style: none; margin: 0; padding: 0; }
 
-#guides ul li a.icon {
-  background: url("../images/sprites.png") no-repeat;
-  display: block;
-  font-family: "Helvetica Neue", Arial, sans-serif;
-  font-size: 14px;
-  margin-bottom: 10px;
-  padding-top: 124px;
-  text-align: center;
-}
 
-#guides ul li a.websites {
-  background-position: 35px -87px;
-}
+/* =============================================================================
+   Embedded content
+   ========================================================================== */
 
-#guides ul li a.mobile-apps {
-  background-position: 35px -231px;
-}
+/*
+ * Improve image quality when scaled in IE7
+ * code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/
+ */
 
-#guides ul li a.apps-on-facebook {
-  background-position: 35px -375px;
-}
+img { border: 0; -ms-interpolation-mode: bicubic; }
 
-#guides ul li a.heroku {
-  background-position: 35px -519px;
-}
-/* ------------------------------------------ */
+/*
+ * Correct overflow displayed oddly in IE9 
+ */
 
-/* =samples
---------------------------------------------- */
-#samples {
-  background-image: url("../images/samples-bg.png");
-  border-bottom: 1px solid #dadada;
-  border-left: 1px solid #b3b3b3;
-  border-right: 1px solid #b3b3b3;
-  border-top: 1px solid #fff;
-}
-
-#samples h3 {
-  background: url("../images/header-sketch.png") no-repeat;
-  color: #646464;
-  font-weight: bold;
-  font-size: 11px;
-  line-height: 29px;
-  text-align: center;
-}
-
-#samples ul {
-  background: url("../images/picture-sketch.png") 4px 8px;
-  background-repeat: repeat-y;
-  height: 161px;
-  overflow: hidden;
-  padding-top: 8px;
-}
-
-#samples li {
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  color: #7c7c7c;
-  display: block;
-  font-size: 11px;
-  font-weight: bold;
-  height: 32px;
-  margin-bottom: 11px;
-  overflow: hidden;
-  position: relative;
-}
-
-#samples li a:link,
-#samples li a:visited {
-  color: #7c7c7c;
-  display: block;
-  line-height: 32px;
-  padding-left: 36px;
-}
-
-#samples .list img {
-  height: auto;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 32px;
-}
-
-#samples .inline ul {
-  background-repeat: repeat;
-}
-
-#samples .inline li {
-  float: left;
-  margin-left: 12px;
-  overflow: hidden;
-  padding: 0;
-  width: 32px;
-  background-position: center 25%;
-  background-repeat: no-repeat;
-  -moz-background-size: cover;
-  background-size: cover;
-}
-
-#samples .inline li.first-column {
-  margin-left: 0;
-}
-
-#samples .inline li a:link,
-#samples .inline li a:visited {
-  display: block;
-  width: 32px;
-  height: 32px;
-  overflow: hidden;
-  text-indent: -9999px;
+svg:not(:root) {
+    overflow: hidden;
 }
 
 
-/* ------------------------------------------ */
+/* =============================================================================
+   Figures
+   ========================================================================== */
 
-/* =clearfix
---------------------------------------------- */
-.clearfix:after {
-  clear: both;
-  content: ".";
-  display: block;
-  font-size: 0;
-  height: 0;
-  line-height: 0;
-  visibility: hidden;
+figure { margin: 0; }
+
+
+/* =============================================================================
+   Forms
+   ========================================================================== */
+
+form { margin: 0; }
+fieldset { border: 0; margin: 0; padding: 0; }
+
+/* 
+ * 1. Correct color not inheriting in IE6/7/8/9 
+ * 2. Correct alignment displayed oddly in IE6/7 
+ */
+
+legend { border: 0; *margin-left: -7px; padding: 0; }
+
+/* Indicate that 'label' will shift focus to the associated form element */
+label { cursor: pointer; }
+
+/*
+ * 1. Correct font-size not inheriting in all browsers
+ * 2. Remove margins in FF3/4 S5 Chrome
+ * 3. Define consistent vertical alignment display in all browsers
+ */
+
+button, input, select, textarea { font-size: 100%; margin: 0; vertical-align: baseline; *vertical-align: middle; }
+
+/*
+ * 1. Define line-height as normal to match FF3/4 (set using !important in the UA stylesheet)
+ * 2. Correct inner spacing displayed oddly in IE6/7
+ */
+
+button, input { line-height: normal; *overflow: visible; }
+
+/*
+ * 1. Display hand cursor for clickable form elements
+ * 2. Allow styling of clickable form elements in iOS
+ */
+
+button, input[type="button"], input[type="reset"], input[type="submit"] { cursor: pointer; -webkit-appearance: button; }
+
+/*
+ * Consistent box sizing and appearance
+ */
+
+input[type="checkbox"], input[type="radio"] { box-sizing: border-box; }
+input[type="search"] { -moz-box-sizing: content-box; -webkit-box-sizing: content-box; box-sizing: content-box; }
+
+/* 
+ * Remove inner padding and border in FF3/4
+ * www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/ 
+ */
+
+button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
+
+/* Remove default vertical scrollbar in IE6/7/8/9 */
+textarea { overflow: auto; vertical-align: top; }
+
+/* Colors for form validity */
+input:valid, textarea:valid {  }
+input:invalid, textarea:invalid { background-color: #f0dddd; }
+
+
+/* =============================================================================
+   Tables
+   ========================================================================== */
+
+table { border-collapse: collapse; border-spacing: 0; }
+
+
+/* =============================================================================
+   Primary styles
+   Author: 
+   ========================================================================== */
+
+
+
+
+
+
+
+
+/* =============================================================================
+   Non-semantic helper classes
+   Please define your styles before this section.
+   ========================================================================== */
+
+/* For image replacement */
+.ir { display: block; text-indent: -999em; overflow: hidden; background-repeat: no-repeat; text-align: left; direction: ltr; }
+.ir br { display: none; }
+
+/* Hide for both screenreaders and browsers:
+   css-discuss.incutio.com/wiki/Screenreader_Visibility */
+.hidden { display: none; visibility: hidden; }
+
+/* Hide only visually, but have it available for screenreaders: by Jon Neal.
+  www.webaim.org/techniques/css/invisiblecontent/  &  j.mp/visuallyhidden */
+.visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+
+/* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: drupal.org/node/897638 */
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
+
+/* Hide visually and from screenreaders, but maintain layout */
+.invisible { visibility: hidden; }
+
+/* Contain floats: nicolasgallagher.com/micro-clearfix-hack/ */ 
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; }
+
+
+
+/* =============================================================================
+   PLACEHOLDER Media Queries for Responsive Design.
+   These override the primary ('mobile first') styles
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 480px) {
+  /* Style adjustments for viewports 480px and over go here */
+
 }
 
-.clearfix {
-  zoom: 1;
+@media only screen and (min-width: 768px) {
+  /* Style adjustments for viewports 768px and over go here */
+
 }
+
+
+/* =============================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+ 
+@media print {
+  * { background: transparent !important; color: black !important; text-shadow: none !important; filter:none !important; -ms-filter: none !important; } /* Black prints faster: sanbeiji.com/archives/953 */
+  a, a:visited { color: #444 !important; text-decoration: underline; }
+  a[href]:after { content: " (" attr(href) ")"; }
+  abbr[title]:after { content: " (" attr(title) ")"; }
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }  /* Don't show links for images, or javascript/internal links */
+  pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
+  thead { display: table-header-group; } /* css-discuss.incutio.com/wiki/Printing_Tables */
+  tr, img { page-break-inside: avoid; }
+  img { max-width: 100% !important; }
+  @page { margin: 0.5cm; }
+  p, h2, h3 { orphans: 3; widows: 3; }
+  h2, h3{ page-break-after: avoid; }
+}
+
