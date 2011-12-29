@@ -1,14 +1,37 @@
 @dark: #231F20;
 @light: #fff;
 @nav_color: #3D4E53;
+@main_text: #A0A5AF;
+@section_margin: -105px;
 
 .damion(@fs: 12px) {
   font: @fs 'Damion', cursive;
 }
 
-.openSansThin(@fs: 12px) {
+.openSansThin(@fs: 12px, @weight: 300) {
   font: @fs 'Open Sans', sans-serif;
-  font-weight: 300;
+  font-weight: @weight;
+}
+
+.helv(@fs: 12px) {
+  font: @fs 'helvetica neue', helvetica, arial;
+}
+
+// css3
+.boxRound(@br: 5px) {
+  -webkit-border-radius: @br;
+     -moz-border-radius: @br;
+          border-radius: @br;
+
+  -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
+}
+
+.boxShadow(@x: 0, @y: 0, @blur: 1px, @alpha) {
+  @val: @x @y @blur rgba(0, 0, 0, @alpha);
+
+  box-shadow:         @val;
+  -webkit-box-shadow: @val;
+  -moz-box-shadow:    @val;
 }
 
 html {
@@ -18,6 +41,20 @@ html {
 h1 {
   color: @light;
   margin: 0;
+}
+
+h2 {
+  .openSansThin(24px);
+  color: @light;
+  margin: 10px 0 5px;
+}
+
+p {
+  .helv(24px);
+  color: @main_text;
+  font-weight: 200;
+  line-height: 38px;
+  margin: 20px 20px;
 }
 
 header {
@@ -41,13 +78,34 @@ header {
   }
 }
 
+#main {
+  margin: 0 auto;
+  width: 95%;
+}
+
 nav {
-  a {
+  float: left;
+  position: relative;
+  width: 100%;
+
+  .bar {
     .openSansThin(32px);
+    .boxRound();
     background: darken(@dark, 10%);
     color: @nav_color;
+    display: block;
+    margin: 10px 0;
+    padding: 25px 10px 25px 0;
+    text-align: right;
     text-decoration: none;
+    width: 40%;
+
+    &.selected, &:hover {
+      background: lighten(@dark, 15%);
+      color: darken(@nav_color, 40%);
+    }
   }
+
 }
 
 #container {
@@ -55,18 +113,99 @@ nav {
   width: 100%;
 }
 
+section {
+  .boxRound(5px);
+  background: lighten(@dark, 2%);
+  float: right;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 10px;
+  width: 59%;
+
+  h1 {
+    .openSansThin(28px, 400);
+    float: left;
+    margin: 0 0 5px;
+    padding: 0;
+  }
+
+  a, a:visited {
+    .openSansThin(24px, 400);
+    color: @light;
+    float: right;
+    margin: 0 5px 0 0;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  img {
+    .boxShadow(3px, 3px, 3px, 0.4);
+    height: auto;
+    width: 100%;
+  }
+}
+
+.recent_work section {
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 0 2% 10px;
+  width: 55%;
+
+  div {
+    width: 100%;
+
+    a {
+      float: right;
+      font-size: 11px;
+      text-align: right;
+      width: 49%;
+
+      &:first-child {
+        float: left;
+        text-align: left;
+      }
+    }
+  }
+
+  p, li {
+    .helv(24px);
+    color: @main_text;
+    font-size: 20px;
+    font-weight: 200;
+    margin: 0;
+  }
+}
 
 @media only screen
 and (min-width : 320px)
 and (max-width : 650px) {
   nav {
-    a {
-      display: block;
+    float: none;
+    width: 100%;
+
+    .bar {
       padding: 25px 0;
       margin: 8px auto;
       text-align: center;
-      width: 95%;
+      width: 100%;
+      z-index: 1;
     }
+  }
+
+  section {
+    .boxRound(0);
+    margin: -10px 0 20px;
+    position: static;
+    width: 100%;
+    z-index: 0;
+  }
+
+  .recent_work section {
+    width: 98%;
   }
 }
 

@@ -32,3 +32,64 @@ app.get('/', function(request, response) {
     redirect: method + '://' + request.headers.host + request.url
   });
 });
+
+// respond to recent work
+app.get('/recent_work/:id', function(request, response) {
+  // detect the http method uses so we can replicate it on redirects
+  var method = request.headers['x-forwarded-proto'] || 'http';
+
+  var workDisplay = require('workDisplay');
+
+  console.log(workDisplay);
+
+  if (request.xhr) {
+    // render the recent_work page
+    response.send(workDisplay.display(request.params.id));
+    // response.render('ajax/recent_work_holder.ejs', {
+    //   layout:   false,
+    //   app:      app,
+    //   display:  workDisplay,
+    //   home:     method + '://' + request.headers.host + '/',
+    //   redirect: method + '://' + request.headers.host + request.url
+    // });
+  } else {
+    // render the home page
+    response.render('recent_work.ejs', {
+      layout:   true,
+      app:      app,
+      display:  workDisplay.display(request.params.id),
+      home:     method + '://' + request.headers.host + '/',
+      redirect: method + '://' + request.headers.host + request.url
+    });
+  }
+});
+
+
+// respond to recent work
+app.get('/recent_work', function(request, response) {
+  // detect the http method uses so we can replicate it on redirects
+  var method = request.headers['x-forwarded-proto'] || 'http';
+
+  var workDisplay = require('workDisplay');
+
+  if (request.xhr) {
+    // render the recent_work page
+    response.render('recent_work.ejs', {
+      layout:   false,
+      app:      app,
+      display:  workDisplay.display("flickyourbic"),
+      home:     method + '://' + request.headers.host + '/',
+      redirect: method + '://' + request.headers.host + request.url
+    });
+  } else {
+    // render the home page
+    response.render('recent_work.ejs', {
+      layout:   true,
+      app:      app,
+      display:  workDisplay.display("flickyourbic"),
+      home:     method + '://' + request.headers.host + '/',
+      redirect: method + '://' + request.headers.host + request.url
+    });
+
+  }
+});
