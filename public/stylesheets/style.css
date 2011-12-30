@@ -11,12 +11,28 @@ h2 {
   color: #ffffff;
   margin: 10px 0 5px;
 }
+h3 {
+  font: 24px 'Open Sans', sans-serif;
+  font-weight: 300;
+  color: #ffffff;
+  margin: 5px 0 0 20px;
+}
+h3 span {
+  color: #a0a5af;
+}
 p {
   font: 24px 'helvetica neue', helvetica, arial;
   color: #a0a5af;
   font-weight: 200;
   line-height: 38px;
   margin: 20px 20px;
+}
+li {
+  font: 24px 'helvetica neue', helvetica, arial;
+  color: #a0a5af;
+  font-size: 20px;
+  font-weight: 200;
+  margin: 0;
 }
 header {
   margin: 0 auto;
@@ -39,6 +55,7 @@ header span {
 }
 #main {
   margin: 0 auto;
+  padding-bottom: 10px;
   width: 95%;
 }
 nav {
@@ -115,7 +132,7 @@ section img {
 .recent_work section {
   margin: 0 auto;
   overflow: hidden;
-  padding: 0 2% 10px;
+  padding: 0 2% 0;
   width: 55%;
 }
 .recent_work section div {
@@ -131,12 +148,27 @@ section img {
   float: left;
   text-align: left;
 }
-.recent_work section p, .recent_work section li {
+.recent_work section p {
   font: 24px 'helvetica neue', helvetica, arial;
   color: #a0a5af;
   font-size: 20px;
   font-weight: 200;
   margin: 0;
+}
+.skills section li {
+  color: #ffffff;
+  padding: 0 0 5px 20px;
+}
+.contact section a {
+  float: none;
+}
+.contact section img {
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  -webkit-box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  -moz-box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  display: inline;
+  margin-top: 20px;
+  width: 15%;
 }
 @media only screen
 and (min-width : 320px)

@@ -93,3 +93,54 @@ app.get('/recent_work', function(request, response) {
 
   }
 });
+
+// respond to skills
+app.get('/skills', function(request, response) {
+  // detect the http method uses so we can replicate it on redirects
+  var method = request.headers['x-forwarded-proto'] || 'http';
+
+  if (request.xhr) {
+    // render the recent_work page
+    response.render('skills.ejs', {
+      layout:   false,
+      app:      app,
+      home:     method + '://' + request.headers.host + '/',
+      redirect: method + '://' + request.headers.host + request.url
+    });
+  } else {
+    // render the home page
+    response.render('skills.ejs', {
+      layout:   true,
+      app:      app,
+      home:     method + '://' + request.headers.host + '/',
+      redirect: method + '://' + request.headers.host + request.url
+    });
+
+  }
+});
+
+// respond to contact
+app.get('/contact', function(request, response) {
+  // detect the http method uses so we can replicate it on redirects
+  var method = request.headers['x-forwarded-proto'] || 'http';
+
+  if (request.xhr) {
+    // render the recent_work page
+    response.render('contact.ejs', {
+      layout:   false,
+      app:      app,
+      home:     method + '://' + request.headers.host + '/',
+      redirect: method + '://' + request.headers.host + request.url
+    });
+  } else {
+    // render the home page
+    response.render('contact.ejs', {
+      layout:   true,
+      app:      app,
+      home:     method + '://' + request.headers.host + '/',
+      redirect: method + '://' + request.headers.host + request.url
+    });
+
+  }
+});
+

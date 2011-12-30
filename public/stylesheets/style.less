@@ -49,12 +49,30 @@ h2 {
   margin: 10px 0 5px;
 }
 
+h3 {
+  .openSansThin(24px);
+  color: @light;
+  margin: 5px 0 0 20px;
+
+  span {
+    color: @main_text;
+  }
+}
+
 p {
   .helv(24px);
   color: @main_text;
   font-weight: 200;
   line-height: 38px;
   margin: 20px 20px;
+}
+
+li {
+  .helv(24px);
+  color: @main_text;
+  font-size: 20px;
+  font-weight: 200;
+  margin: 0;
 }
 
 header {
@@ -80,6 +98,7 @@ header {
 
 #main {
   margin: 0 auto;
+  padding-bottom: 10px;
   width: 95%;
 }
 
@@ -152,7 +171,7 @@ section {
 .recent_work section {
   margin: 0 auto;
   overflow: hidden;
-  padding: 0 2% 10px;
+  padding: 0 2% 0;
   width: 55%;
 
   div {
@@ -171,12 +190,32 @@ section {
     }
   }
 
-  p, li {
+  p {
     .helv(24px);
     color: @main_text;
     font-size: 20px;
     font-weight: 200;
     margin: 0;
+  }
+}
+
+.skills section {
+  li {
+    color: @light;
+    padding: 0 0 5px 20px;
+  }
+}
+
+.contact section {
+  a {
+    float: none;
+  }
+
+  img {
+    .boxShadow(0, 0, 0, 0);
+    display: inline;
+    margin-top: 20px;
+    width: 15%;
   }
 }
 
