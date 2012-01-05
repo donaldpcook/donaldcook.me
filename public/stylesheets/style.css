@@ -139,14 +139,29 @@ section img {
   width: 100%;
 }
 .recent_work section div a {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  background: #fff;
+  color: #231f20;
   float: right;
-  font-size: 11px;
+  font-size: 14px;
+  margin-bottom: 5px;
+  padding: 0 5px;
   text-align: right;
-  width: 49%;
+  width: 39%;
 }
 .recent_work section div a:first-child {
   float: left;
   text-align: left;
+}
+.recent_work section div a:hover {
+  background: #4c4345;
+  color: #fff;
+  text-decoration: none;
 }
 .recent_work section p {
   font: 24px 'helvetica neue', helvetica, arial;
@@ -197,6 +212,7 @@ and (max-width : 650px) {
     z-index: 0;
   }
   .recent_work section {
-    width: 98%;
+    padding: 0;
+    width: 100%;
   }
 }
