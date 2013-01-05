@@ -59,7 +59,7 @@ h3 {
   }
 }
 
-p, a {
+p, p > a {
   .helv(24px);
   color: @main_text;
   font-weight: 200;
@@ -68,11 +68,11 @@ p, a {
   text-decoration: none;
 }
 
-a {
+p > a {
   margin: 0;
 }
 
-a:hover {
+p > a:hover {
   text-decoration: underline;
 }
 
@@ -161,27 +161,25 @@ section {
     margin: 0 0 5px;
     padding: 0;
   }
-
-  li {
-    a, a:visited {
-      .openSansThin(24px, 400);
-      color: @light;
-      float: right;
-      margin: 0 5px 0 0;
-      text-decoration: none;
-
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-  }
-
   img {
     .boxShadow(3px, 3px, 3px, 0.4);
     height: auto;
     width: 100%;
   }
 }
+
+section > a, section > a:visited {
+  .openSansThin(24px, 400);
+  color: @light;
+  float: right;
+  margin: 0 5px 0 0;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
 
 .recent_work section {
   margin: 0 auto;
