@@ -20,12 +20,23 @@ h3 {
 h3 span {
   color: #a0a5af;
 }
-p {
+p,
+a {
   font: 24px 'helvetica neue', helvetica, arial;
   color: #a0a5af;
   font-weight: 200;
   line-height: 38px;
   margin: 20px 20px;
+  text-decoration: none;
+}
+a {
+  margin: 0;
+}
+a:hover {
+  text-decoration: underline;
+}
+a:visited {
+  color: #a0a5af;
 }
 li {
   font: 24px 'helvetica neue', helvetica, arial;
@@ -81,7 +92,8 @@ nav .bar {
   text-decoration: none;
   width: 40%;
 }
-nav .bar.selected, nav .bar:hover {
+nav .bar.selected,
+nav .bar:hover {
   background: #4c4345;
   color: #000000;
 }
@@ -111,7 +123,8 @@ section h1 {
   margin: 0 0 5px;
   padding: 0;
 }
-section a, section a:visited {
+section li a,
+section li a:visited {
   font: 24px 'Open Sans', sans-serif;
   font-weight: 400;
   color: #ffffff;
@@ -119,7 +132,8 @@ section a, section a:visited {
   margin: 0 5px 0 0;
   text-decoration: none;
 }
-section a:hover, section a:visited:hover {
+section li a:hover,
+section li a:visited:hover {
   text-decoration: underline;
 }
 section img {
@@ -185,9 +199,7 @@ section img {
   margin-top: 20px;
   width: 15%;
 }
-@media only screen
-and (min-width : 320px)
-and (max-width : 650px) {
+@media only screen and (min-width: 320px) and (max-width: 650px) {
   nav {
     float: none;
     width: 100%;

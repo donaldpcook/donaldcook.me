@@ -59,12 +59,25 @@ h3 {
   }
 }
 
-p {
+p, a {
   .helv(24px);
   color: @main_text;
   font-weight: 200;
   line-height: 38px;
   margin: 20px 20px;
+  text-decoration: none;
+}
+
+a {
+  margin: 0;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:visited {
+  color: @main_text;
 }
 
 li {
@@ -149,15 +162,17 @@ section {
     padding: 0;
   }
 
-  a, a:visited {
-    .openSansThin(24px, 400);
-    color: @light;
-    float: right;
-    margin: 0 5px 0 0;
-    text-decoration: none;
+  li {
+    a, a:visited {
+      .openSansThin(24px, 400);
+      color: @light;
+      float: right;
+      margin: 0 5px 0 0;
+      text-decoration: none;
 
-    &:hover {
-      text-decoration: underline;
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 
