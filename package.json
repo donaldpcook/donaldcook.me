@@ -1,9 +1,16 @@
 {
-  "name":        "underscoredc",
-  "version":     "0.0.1",
-  "description": "My profile",
-  "dependencies": {
-    "ejs": "0.4.3",
-    "express": "2.5.2"
+  "name": "donaldcook.me",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp-ruby-sass": "~0.7.1",
+    "gulp-autoprefixer": "~1.0.1",
+    "gulp": "~3.8.9",
+    "gulp-watch": "~1.1.0",
+    "gulp-webserver": "~0.8.3",
+    "gulp-rename": "~1.2.0"
   }
 }
