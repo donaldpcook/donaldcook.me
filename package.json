@@ -10,7 +10,7 @@
     "gulp-autoprefixer": "~1.0.1",
     "gulp": "~3.8.9",
     "gulp-watch": "~1.1.0",
-    "gulp-webserver": "~0.8.3",
-    "gulp-rename": "~1.2.0"
+    "gulp-rename": "~1.2.0",
+    "gulp-connect": "~2.0.6"
   }
 }

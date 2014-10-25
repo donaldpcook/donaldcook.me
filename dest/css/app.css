@@ -1,3 +1,15 @@
+/* Neat 1.7.0
+ * http://neat.bourbon.io
+ * Copyright 2012-2014 thoughtbot, inc.
+ * MIT License */
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 body {
   background: #F6FFE0;
 }
@@ -26,4 +38,61 @@ h4 {
 p {
   font-size: 14px;
   font-family: azo sans, sans-serif;
+}
+
+.samples-thumbs {
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto;
+}
+.samples-thumbs:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.samples-column {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 31.76157%;
+}
+.samples-column:last-child {
+  margin-right: 0;
+}
+
+.samples-full {
+  -webkit-transform: translateX(100%);
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.animateIn {
+  -webkit-animation: rotate3DSlideInLeft 0.3s 0.1s forwards;
+  animation: rotate3DSlideInLeft 0.3s 0.1s forwards;
+}
+
+@-webkit-keyframes rotate3DSlideInLeft {
+  from {
+    -webkit-transform: translateX(40%) rotateY(45deg) translateZ(-300px);
+  }
+  to {
+    -webkit-transform: translateX(0) rotateY(0deg) translateZ(0);
+    opacity: 1;
+  }
+}
+@keyframes rotate3DSlideInLeft {
+  from {
+    -webkit-transform: translateX(-40%) rotateY(45deg) translateZ(-300px);
+    transform: translateX(-40%) rotateY(45deg) translateZ(-300px);
+  }
+  to {
+    -webkit-transform: translateX(0) rotateY(0deg) translateZ(0);
+    transform: translateX(0) rotateY(0deg) translateZ(0);
+    opacity: 1;
+  }
+}
+.is-hidden {
+  opacity: 0;
 }

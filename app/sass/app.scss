@@ -1,29 +1,9 @@
-body {
-  background: #F6FFE0;
-}
+@import '../../bourbon/bourbon';
+@import '../../neat/neat';
 
-h1 {
-  font-size: 36px;
-  font-family: adelle, serif;
-  font-weight: normal;
-}
+@import '_global';
+@import '_samples';
 
-h2 {
-  font-size: 44px;
-  font-family: adelle, serif;
-}
-
-h3 {
-  font-size: 18px;
-  font-family: adelle, serif;
-}
-
-h4 {
-  font-size: 14px;
-  font-family: adelle, serif;
-}
-
-p {
-  font-size: 14px;
-  font-family: azo sans, sans-serif;
+.is-hidden {
+  opacity: 0;
 }
