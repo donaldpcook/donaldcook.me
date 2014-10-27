@@ -11,14 +11,15 @@
   position: absolute;
   top: 0;
   width: 100%;
+  background: #fff;
 }
 
 .animateIn {
-  -webkit-animation: rotate3DSlideInLeft 0.3s 0.1s forwards;
-  animation: rotate3DSlideInLeft 0.3s 0.1s forwards;
+  -webkit-animation: slideInRight 0.5s 0.1s forwards;
+  animation: slideInRight 0.5s 0.1s forwards;
 }
 
-@-webkit-keyframes rotate3DSlideInLeft {
+@-webkit-keyframes slideInRight {
 	from {
 		-webkit-transform: translateX(40%) rotateY(45deg) translateZ(-300px);
 	}
@@ -28,7 +29,7 @@
 	}
 }
 
-@keyframes rotate3DSlideInLeft {
+@keyframes slideInRight {
 	from {
 		-webkit-transform: translateX(-40%) rotateY(45deg) translateZ(-300px);
 		transform: translateX(-40%) rotateY(45deg) translateZ(-300px);

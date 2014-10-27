@@ -28,3 +28,6 @@ p {
   font-family: azo sans, sans-serif;
 }
 
+.btn {
+  @include button;
+}
