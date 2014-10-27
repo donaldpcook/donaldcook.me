@@ -4,7 +4,7 @@ var gulp = require('gulp'),
     autoprefixer = require('gulp-autoprefixer'),
     watch = require('gulp-watch');
 
-gulp.task('connect', function() {
+gulp.task('webserver', function() {
   connect.server({
     root: 'dest',
     livereload: true
@@ -23,7 +23,12 @@ gulp.task('styles', function() {
   return gulp.src('app/sass/app.scss')
     .pipe(sass({style: 'expanded'}))
     .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9'))
-    .pipe(gulp.dest('dest/css'))
+    .pipe(gulp.dest('dest/css'));
+});
+
+gulp.task('livereload', function() {
+  gulp.src()
+    .pipe(watch(['dest/css/*.css']))
     .pipe(connect.reload());
 });
 
@@ -33,4 +38,4 @@ gulp.task('watch', function() {
   gulp.watch('app/js/animation.js', ['move']);
 });
 
-gulp.task('default', ['styles', 'move', 'watch']);
+gulp.task('default', ['styles', 'move', 'webserver', 'livereload', 'watch']);

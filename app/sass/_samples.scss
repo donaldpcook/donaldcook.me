@@ -1,5 +1,6 @@
 .samples {
   position: relative;
+  overflow: hidden;
 }
 
 .samples-thumbs {
@@ -10,37 +11,52 @@
   @include span-columns(4);
 }
 
+.samples-thumbnail {
+  margin-bottom: 100px;
+}
+
 .samples-full {
-  -webkit-transform: translateX(100%);
   position: absolute;
   top: 0;
   width: 100%;
   background: #fff;
+
+  animation: slideOutLeft 0.8s 0.3s forwards;
+}
+
+.samples-full-container {
+  display: none;
+
+  > img {
+    max-width: 100%;
+  }
+
+  &.is-shown {
+    display: block;
+  }
 }
 
 .animateIn {
-  -webkit-animation: slideInRight 0.5s 0.1s forwards;
-  animation: slideInRight 0.5s 0.1s forwards;
+  transform: translateX(100%);
+  animation: slideInLeft 0.8s 0.3s forwards;
 }
 
-@-webkit-keyframes slideInRight {
-	from {
-		-webkit-transform: translateX(40%) rotateY(45deg) translateZ(-300px);
-	}
-	to {
-		-webkit-transform: translateX(0) rotateY(0deg) translateZ(0);
-		opacity: 1;
-	}
+@keyframes slideInLeft {
+  from {
+    transform: translateX(100%) rotateY(45deg) translateZ(-300px);
+  }
+  to {
+    transform: translateX(0) rotateY(0deg) translateZ(0);
+    opacity: 1;
+  }
 }
 
-@keyframes slideInRight {
-	from {
-		-webkit-transform: translateX(-40%) rotateY(45deg) translateZ(-300px);
-		transform: translateX(-40%) rotateY(45deg) translateZ(-300px);
-	}
-	to {
-		-webkit-transform: translateX(0) rotateY(0deg) translateZ(0);
-		transform: translateX(0) rotateY(0deg) translateZ(0);
-		opacity: 1;
-	}
+@keyframes slideOutLeft {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(-100%);
+  }
 }
