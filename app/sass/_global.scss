@@ -1,5 +1,11 @@
+$medium: 500px;
+
+$primary-color: #0F222B;
+$secondary-color: #94A963;
+
 body {
   background: #F6FFE0;
+  color: $primary-color;
 }
 
 h1 {
@@ -9,6 +15,7 @@ h1 {
 }
 
 h2 {
+  color: #94A963;
   font-size: 44px;
   font-family: adelle, serif;
 }

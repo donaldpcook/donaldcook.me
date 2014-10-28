@@ -1,6 +1,7 @@
 .samples {
   position: relative;
   overflow: hidden;
+  margin-top: 25px;
 }
 
 .samples-thumbs {
@@ -8,10 +9,13 @@
 }
 
 .samples-column {
-  @include span-columns(4);
+  @include media($medium) {
+    @include span-columns(4);
+  }
 }
 
 .samples-thumbnail {
+  position: relative;
   margin-bottom: 100px;
 }
 
@@ -35,6 +39,18 @@
     display: block;
   }
 }
+
+.samples-button {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  font-family: azo-sans-web, sans-serif;
+  font-size: 19px;
+  background-color: rgba(16, 34, 43, 0.08);
+}
+
+
+
 
 .animateIn {
   transform: translateX(100%);
