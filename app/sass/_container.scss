@@ -1,0 +1,9 @@
+.container-content {
+  &:after {
+    display: block;
+    width: 50%;
+    margin: 0 auto;
+    content: '';
+    border-bottom: 1px dashed $secondary-color;
+  }
+}
