@@ -21,12 +21,8 @@
     @include span-columns(6);
     @include omega();
 
-    &:nth-child(odd) {
-      @include pad(0 default 0 0);
-    }
-
     &:nth-child(even) {
-      @include pad(0 0 0 default);
+      float: right;
     }
   }
 }
