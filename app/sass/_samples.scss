@@ -2,10 +2,18 @@
   position: relative;
   overflow: hidden;
   margin-top: 25px;
+
+  @include media($large) {
+    @include outer-container();
+  }
 }
 
 .samples-container {
   position: relative;
+
+  @include media($large) {
+    @include pad(default 0 0 0);
+  }
 }
 
 .samples-thumbs {
@@ -16,6 +24,11 @@
   position: relative;
   margin-bottom: 30px;
   overflow: hidden;
+  cursor: pointer;
+
+  > img {
+    width: 100%;
+  }
 
   @include media($medium) {
     @include span-columns(6);
@@ -23,6 +36,18 @@
 
     &:nth-child(even) {
       float: right;
+    }
+  }
+
+  @include media($large) {
+    @include span-columns(4);
+
+    &:nth-child(even) {
+      float: left;
+    }
+
+    &:nth-child(3) {
+      @include omega();
     }
   }
 }
@@ -51,6 +76,7 @@
 .samples-button {
   position: absolute;
   bottom: 0;
+  left: 0;
   width: 100%;
   font-family: azo-sans-web, sans-serif;
   font-size: 19px;

@@ -2,8 +2,8 @@
   document.body.querySelector('.js-thumbs').addEventListener('click', function(evt) {
     var sampleContainer = document.body.querySelector('.samples-full');
 
-    if (evt.target.dataset.sample) {
-      showBlock(evt.target.dataset.sample, sampleContainer);
+    if (evt.target.parentNode.dataset.sample) {
+      showBlock(evt.target.parentNode.dataset.sample, sampleContainer);
     }
 
     document.body.querySelector('.samples-full').className += ' animateIn';

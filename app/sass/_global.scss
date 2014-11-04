@@ -1,4 +1,5 @@
 $medium: 500px;
+$large: 800px;
 
 $primary-color: #0F222B;
 $secondary-color: #94A963;
@@ -38,6 +39,10 @@ h3 {
   margin-bottom: 0;
   font-size: 18px;
   font-family: adelle, serif;
+
+  @include media($medium) {
+    margin-top: 0;
+  }
 }
 
 h4 {
@@ -64,4 +69,29 @@ p {
 .row {
   @include outer-container;
   @include pad(0 default 0 default);
+}
+
+.content-row {
+  @include media(min-width $medium max-width $large) {
+    @include outer-container;
+    @include pad(0 0 0 0);
+  }
+}
+
+.md-6 {
+  @include media(min-width $medium max-width $large) {
+    @include span-columns(6);
+  }
+}
+
+
+
+.content-social > a {
+  text-decoration: none;
+  color: $primary-color;
+  font-size: 48px;
+
+  @include media($medium) {
+    font-size: 24px;
+  }
 }

@@ -17,6 +17,12 @@ gulp.task('move', function() {
 
   gulp.src('app/js/animation.js')
     .pipe(gulp.dest('dest/js'));
+
+  gulp.src('app/fonts/*')
+    .pipe(gulp.dest('dest/fonts'));
+
+  gulp.src('app/images/**/*.*')
+    .pipe(gulp.dest('dest/images'));
 });
 
 gulp.task('styles', function() {

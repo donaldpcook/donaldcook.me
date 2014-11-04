@@ -6,4 +6,67 @@
     content: '';
     border-bottom: 1px dashed $secondary-color;
   }
+
+  @include media($medium) {
+    &:after {
+      content: none;
+    }
+
+    &:first-child {
+      padding-bottom: 15%;
+      border-right: 1px dashed $secondary-color;
+    }
+  }
+}
+
+.content-email {
+  text-decoration: none;
+  color: $primary-color;
+}
+
+@include media(min-width $medium max-width $large) {
+  .container > .container-content {
+    &:before {
+      display: block;
+      width: 50%;
+      margin: 0 auto 10px;
+      content: '';
+      border-top: 1px dashed $secondary-color;
+    }
+
+    &:after {
+      content: '';
+    }
+  }
+}
+
+@include media($large) {
+  .container {
+    @include outer-container;
+
+    & > .container-content {
+      @include pad(0 0 0 default);
+      border-right: 0;
+    }
+
+    > .content-row > .container-content:first-child {
+      padding-right: 0;
+    }
+  }
+
+  .container-content {
+    @include span-columns(4);
+    @include pad(0 default 0 default);
+    /*margin-right: 0;*/
+    border: 0;
+
+    &:first-child {
+      border: 0;
+    }
+
+    &.container-content-main {
+      border-left: 1px dashed $secondary-color;
+      border-right: 1px dashed $secondary-color;
+    }
+  }
 }
