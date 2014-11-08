@@ -6,7 +6,9 @@
       showBlock(evt.target.parentNode.dataset.sample, sampleContainer);
     }
 
-    document.body.querySelector('.samples-full').className += ' animateIn';
+    var sample = document.body.querySelector('.samples-full');
+    sample.style.height = sample.parentElement.parentElement.clientHeight + 'px';
+    sample.className += ' animateIn';
   }, false);
 
   document.body.querySelector('.samples-full').addEventListener('click', function(evt) {

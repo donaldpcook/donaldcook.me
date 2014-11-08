@@ -102,8 +102,22 @@
 }
 
 .samples-full-info {
+  @include media($large) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 5px;
+    width: 30%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+
   > .samples-button {
     position: static;
+
+    @include media($large) {
+      background-color: transparent;
+    }
 
     &:after {
       content: '-';
