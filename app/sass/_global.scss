@@ -95,3 +95,16 @@ p {
     font-size: 24px;
   }
 }
+
+.site-footer {
+  padding-bottom: 10px;
+  color: $secondary-color;
+  font-size: 12px;
+  font-family: azo-sans-web, sans-serif;
+  text-align: center;
+
+  a {
+    color: $secondary-color;
+    text-decoration: none;
+  }
+}
