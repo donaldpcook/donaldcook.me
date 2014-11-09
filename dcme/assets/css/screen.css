@@ -181,6 +181,18 @@ p {
   }
 }
 
+.site-footer {
+  padding-bottom: 10px;
+  color: #94A963;
+  font-size: 12px;
+  font-family: azo-sans-web, sans-serif;
+  text-align: center;
+}
+.site-footer a {
+  color: #94A963;
+  text-decoration: none;
+}
+
 .container-content:after {
   display: block;
   width: 50%;
@@ -471,3 +483,4 @@ p {
 .is-hidden {
   opacity: 0;
 }
+
