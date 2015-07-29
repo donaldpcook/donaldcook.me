@@ -49,6 +49,10 @@
     &:nth-child(3) {
       @include omega();
     }
+
+    &:nth-child(6) {
+      @include omega();
+    }
   }
 }
 
@@ -58,7 +62,7 @@
   width: 100%;
   background: #fff;
 
-  animation: slideOutLeft 0.8s 0.3s forwards;
+  animation: slideOutLeft 0.2s 0.1s forwards;
 }
 
 .samples-full-container {
@@ -127,7 +131,7 @@
 
 .animateIn {
   transform: translateX(100%);
-  animation: slideInLeft 0.8s 0.3s forwards;
+  animation: slideInLeft 0.3s 0.1s forwards;
 }
 
 @keyframes slideInLeft {

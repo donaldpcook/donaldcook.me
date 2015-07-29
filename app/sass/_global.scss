@@ -1,17 +1,17 @@
 $medium: 500px;
 $large: 800px;
 
-$primary-color: #0F222B;
-$secondary-color: #94A963;
+$primary-color: rgba(51, 3, 0, .7);
+$secondary-color: rgba(51, 3, 0, .8);
 
 body {
-  background: #F6FFE0;
+  background: linear-gradient(to bottom, #fff, rgba(51, 3, 0, .05));
   color: $primary-color;
 }
 
 h1 {
   font-size: 36px;
-  font-family: adelle, serif;
+  font-family: futura-pt, serif;
   font-weight: normal;
   text-align: center;
 
@@ -27,18 +27,22 @@ h1 {
 }
 
 h2 {
-  color: #94A963;
+  color: #333;
   margin-top: 0;
   font-size: 44px;
   line-height: 30px;
-  font-family: adelle, serif;
+  font-family: futura-pt, serif;
   text-align: center;
 }
 
 h3 {
+  color: rgba(51, 3, 0, .8);
   margin-bottom: 0;
-  font-size: 18px;
-  font-family: adelle, serif;
+  padding-bottom: 5px;
+  font-size: 20px;
+  line-height: 22px;
+  font-family: futura-pt, serif;
+  font-weight: 300;
 
   @include media($medium) {
     margin-top: 0;
@@ -48,7 +52,7 @@ h3 {
 h4 {
   margin: 5 0;
   font-size: 14px;
-  font-family: adelle, serif;
+  font-family: futura-pt, serif;
 }
 
 p {
